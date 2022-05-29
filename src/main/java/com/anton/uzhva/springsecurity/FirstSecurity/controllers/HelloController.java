@@ -17,6 +17,7 @@ public class HelloController {
 
     @GetMapping("/showUserInfo")
     public String showUserInfo(Model model) {
+        //
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         PersonDetails personDetails = (PersonDetails) authentication.getPrincipal();
         Person person = personDetails.getPerson();
